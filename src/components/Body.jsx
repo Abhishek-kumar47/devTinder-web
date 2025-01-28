@@ -25,7 +25,7 @@ catch(err){
   if(err.status === 401){
   navigate("/login");
   }
-  console.log("Error in fetching user", err);
+  
  
 }
 };
