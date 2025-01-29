@@ -69,6 +69,11 @@ const NavBar = () => {
                     </Link>
                   </li>
                   <li>
+                    <Link to="/requests" onClick={closeDropdown}>
+                      Requests
+                    </Link>
+                  </li>
+                  <li>
                     <a onClick={() => { handleLogout(); closeDropdown(); }}>Logout</a>
                   </li>
                 </ul>
