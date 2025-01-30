@@ -33,8 +33,8 @@ const Requests = () => {
     useEffect(() => {
         fetchrequest();
     },[]);
-    if (!requests) return <h1>Loading...</h1>;
-    if (requests.length === 0) return <h1>No Requests yet</h1>;
+    if (!requests) return <h1 className="flex justify-center my-10">Loading...</h1>;
+    if (requests.length === 0) return <h1 className="flex justify-center my-10">No Requests yet</h1>;
 
     return (
         <div className="text-center my-10">
