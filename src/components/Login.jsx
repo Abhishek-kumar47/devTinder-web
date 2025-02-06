@@ -116,13 +116,20 @@ const handleSignUp = async () =>{
       <button className="btn btn-primary" onClick={isLoginForm? handleLogin : handleSignUp}>{isLoginForm ? "Login" : "Sign Up"}</button>
     </div>
     <p
-            className="m-auto cursor-pointer py-2"
-            onClick={() => setIsLoginForm((value) => !value)}
-          >
-            {isLoginForm
-              ? "New User? Signup Here"
-              : "Existing User? Login Here"}
-          </p>
+  className="m-auto cursor-pointer py-2"
+  onClick={() => setIsLoginForm((value) => !value)}
+>
+  {isLoginForm ? (
+    <>
+      New User? <span className="text-blue-500 font-semibold">SignUp!</span>
+    </>
+  ) : (
+    <>
+      Already have an account? <span className="text-blue-500 font-semibold">Login!</span>
+    </>
+  )}
+</p>
+
   </div>
 </div>
     </div>

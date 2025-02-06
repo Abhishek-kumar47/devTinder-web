@@ -5,8 +5,9 @@ const feedSlice = createSlice({
   initialState: null,
   reducers: {
     addFeed: (state, action) => {
-      return action.payload;
-    },
+      return action.payload?.data || []; // Fallback to empty array if `data` is missing
+    }
+    ,
     removeUserFromFeed: (state, action) => {
       const newFeed = state.filter(user => user._id !== action.payload);
       return newFeed;
